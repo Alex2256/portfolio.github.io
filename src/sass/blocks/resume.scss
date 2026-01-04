@@ -1,0 +1,106 @@
+@use "/src/sass/base/mixins.scss" as*;
+@use "/src/sass/base/variables.scss" as *;
+
+.resume{
+    padding-top: 120px;
+    &__title{
+        text-align: center;
+        position: relative;
+        @include before_circle;
+        &::before{
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__subtitle{
+        margin-top: 6px;
+        text-align: center;
+    }
+    &__divider{
+        @include divider;
+    }
+    &__wrapper{
+        padding: 60px 65px 0 65px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 136px;
+    }
+    &__column{
+        &-title{
+            position: relative;
+            padding-left: 35px;
+            &::before{
+                position: absolute;
+                content:"";
+                width: 15px;
+                height: 15px;
+                border-radius:100%;
+                background-color: $yellow;
+                z-index: 10;
+                left: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        ul{
+            li{
+                
+                position: relative;
+                list-style-type: none;
+                &::after{
+                    content: '';
+                    width: 1px;
+                    height: calc(100% + 9px);
+                    background-color: black;
+                    position: absolute;
+                    left: 0;
+                    top: -9px;
+                }
+            }
+        }
+    }
+    &__item{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 67px;
+            height: 1px;
+            width: 43px;
+            background-color: black;
+        }
+        &-head{
+            position: relative;
+            padding: 45px 0 0 100px;
+        }
+        &-body{
+            padding-left: 43px;
+            margin-top: 12px;
+        }
+        &-icon{
+            position: absolute;
+            @include before_circle;  
+            &::before{
+                left: -58px;
+                top: 4px;
+            };
+            img{
+                max-inline-size: none;
+                position: absolute;
+                top: 18px;
+                left: -40px;
+                z-index: 15;
+            }
+        }
+        &-location{
+            margin-top: 5px;
+            font-weight: 500;
+            font-size: 12px;
+        }
+        &-body{
+            font-weight: 500;
+            font-size: 12px;
+        }
+    }
+
+}

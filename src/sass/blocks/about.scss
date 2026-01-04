@@ -1,0 +1,110 @@
+@use '/src/sass/base/mixins.scss' as *;
+.about{
+    padding-top: 120px;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        column-gap: 70px;
+        grid-template-rows:  minmax(245px, auto)
+    }
+    &__description{
+        position: relative;
+        padding: 6px 0 40px 0;
+    }
+    &__image{
+        grid-row-start: 1;
+        grid-row-end: 3; 
+        img{
+            object-fit: cover;
+        }
+    }
+    &__subtitle{
+        margin-left: 12px;
+        @include before_circle;
+        &::before{
+            top: 0px;
+            left: -1px;
+        }
+    }
+    &__title{
+        margin-top: 6px; 
+    }
+    &__divider{
+        @include divider;
+        margin: 0;
+    }
+    &__text{
+        margin-top: 24px;
+        font-weight: 500;
+        font-size: 14px;
+        color: #000;
+    }
+    &__skils{
+        display: grid;
+        grid-template: repeat(2, minmax(116px, auto))/ repeat(2, 260px);
+        grid-auto-rows: 1fr;
+        column-gap: 50px;
+        row-gap: 20px;
+    }
+    &__skil{
+        position: relative;
+        padding: 6px 0 0 60px;
+        @include before_circle;
+        &::before {
+                top: 0px;
+                left: -1px;
+            }
+        p{
+            margin-top: 6px;
+            font-weight: 500;
+            font-size: 12px;
+            color: #000;
+        }
+        svg{
+            position: absolute;
+            left: 15px;
+            top: 15px;
+        }
+    }
+};
+
+@media screen and (max-width: 1200px) {
+    .about{
+        &__wrapper{
+            column-gap: 40px;
+        }
+        &__skils{
+            column-gap: 5px;
+            row-gap: 5px;
+            grid-template-columns: repeat(2, 240px);
+        }
+        &__skil{
+            padding-left: 44px;
+        }
+        &__image {
+            img{
+              height: 100%; 
+              
+            }
+        }
+    }
+};
+
+@media screen and (max-width: 992px){
+    .about{
+        &__title{
+            font-size: 26px;
+        }
+        &__wrapper{
+            grid-template-columns: 300px 380px ;
+        }
+        &__skils{
+            grid-template-columns: 380px;
+        }
+        &__skil {
+            padding-left: 60px;
+        }
+    }
+
+}
+

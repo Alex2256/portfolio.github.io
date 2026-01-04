@@ -1,0 +1,27 @@
+@use '/src/sass/base/variables.scss' as *;
+
+@mixin title{
+    font-weight: 700;
+    color: #000;
+};
+
+@mixin before_circle{
+    &::before{
+        content:'';
+        position: absolute;
+        top: -7px;
+        left: -13px;
+        width: 36px;
+        height: 36px;
+        border-radius: 100%;
+        background: $yellow;
+        z-index: -1;
+    }
+}
+@mixin divider{
+    display: block;
+    border: 3px solid $yellow;
+    width: 60px;
+    height: 0px;
+    margin: 25px auto 0 auto;
+}

@@ -1,0 +1,40 @@
+@use '/src/sass/base/mixins.scss' as *;
+.title{
+    @include title;
+}
+
+.title-fz48 {
+    @include title;
+    font-size: 48px;
+}
+
+.title-fz36{
+    @include title;
+    font-size: 36px;
+    
+}
+
+.title-fz16 {
+    @include title;
+    font-size: 16px;
+}
+
+.title-fz14 {
+    @include title;
+    font-size: 14px;
+    display: block;
+}
+.title-fz20{
+    @include title;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 576px) {
+    .title-fz48{
+        font-size: 26px;
+    }
+    .title-fz36 {
+        @include title;
+        font-size: 24px;
+    }
+}

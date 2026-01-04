@@ -1,0 +1,50 @@
+@use '/src/sass/base/variables.scss' as *; 
+@use '/src/sass/base/mixins.scss' as *;
+.progress{
+    padding-top: 120px;
+    &__wrapper{
+        display: grid;
+        grid-template: repeat(2, 70px) / repeat(3, 350px);
+        column-gap: 45px;
+        row-gap: 30px;
+    }
+    &__item{
+        position: relative;
+        &-head{
+            padding: 9px 0 0 14px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__title{
+        position: relative;
+        @include before_circle;
+        &:before{
+            top: -8px;
+            left: -14px;
+        }
+    }
+    &__persent{
+        font-weight: 500;
+        font-size: 14px;
+        color: #000;
+    }
+    &__item{
+        &-body{
+            margin-top: 27px;
+        }
+    }
+    &__rectangle{
+        position: absolute;
+        bottom: 0px;
+        border-radius: 4px;
+        width: 350px;
+        height: 14px;
+        background: #e8e4de;
+        &-orange{
+            border-radius: 4px;
+            height: 14px;
+            background: $yellow;
+        }
+    }
+}

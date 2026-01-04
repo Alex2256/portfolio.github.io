@@ -1,0 +1,42 @@
+.sidepanel{
+    position: fixed;
+    top: 233px;
+    left: 53px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 24px;
+    height: 340px;
+    gap: 15px;
+    z-index: 3;
+    &__divider{
+        display: block;
+        border: 2px solid #000;
+        width: 2px;
+        height: 70px;
+        transform: rotate(180deg);
+    }
+    &__text{
+        height: 148px;
+        width: 24px;
+        span{
+        white-space: nowrap ;
+        height: 148px;
+        width: 24px;
+        display: block;
+        font-weight: 700;
+        font-size: 16px;
+        color: #000;
+        transform: rotate(-90deg);
+        translate: (260% 40%);
+        }
+        
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .sidepanel{
+        display: none;
+    }
+}

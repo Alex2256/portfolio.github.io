@@ -1,0 +1,69 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+.promo{
+    position: relative;
+    padding-top: 208px;
+    min-height: 100vh;
+    background: url(/src/img/main_bg.jpg) no-repeat 50%/cover;
+    &__title{
+        margin-top: 9px;
+        width: 532px;
+    }
+    &__subtitle{
+        position: relative;
+        @include before_circle;
+        z-index: 2;
+        
+    }
+    &__btns{
+        margin-top: 25px;
+        width: 248px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;    
+    }
+    &__link{
+        width: 135px;
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 14px;
+        color: #000;
+        text-decoration: none;
+        align-items: center;
+        &:hover{
+            cursor: pointer;
+            color: #000;
+            text-decoration: none;
+        }
+    }   
+}
+@media screen and (max-width: 576px) {
+    .promo{
+        background: url("/src/img/main_bg.jpg") no-repeat 57% / cover;
+        &__title{
+            font-size: 36px;
+            width: 300px;
+        }        
+    .hamburger {
+        right: 20px;
+        top: 20px;   
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .promo {
+        &__title {
+            width: 300px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
