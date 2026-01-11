@@ -46,3 +46,29 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px){
+    .skills{
+        &__wrapper{
+            justify-content: center;
+            grid-template: repeat(auto-fill, 270px) / repeat(auto-fill, 270px);
+        }
+    }
+};
+
+@media screen and (max-width: 576px){
+    .skills{
+        padding-top: 40px;
+        &__subtitle{
+            margin-top: 20px;
+        }
+        &__divider{
+            margin-top: 15px;
+        }
+        &__wrapper{
+            padding-top: 0px;
+            margin-top: 20px;
+            gap: 20px;
+        }   
+    }
+}

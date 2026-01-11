@@ -29,6 +29,12 @@
     font-size: 20px;
 }
 
+@media screen and (max-width: 992px){
+    .title-fz36{
+        font-size: 26px;
+    }
+}
+
 @media screen and (max-width: 576px) {
     .title-fz48{
         font-size: 26px;

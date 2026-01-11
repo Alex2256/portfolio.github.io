@@ -37,7 +37,8 @@ img {
 }
 .container {
     width: 1140px;
-    margin: 0 auto;
+    margin: 0px auto;
+    
 }
 @media screen and (max-width: 1200px) {
     .container {
@@ -59,7 +60,7 @@ img {
 @media screen and (max-width: 576px) {
     .container{
         width: 100%;
-        padding: 0 15px 0 15px;
+        padding: 0 10px;
     } 
 }
 

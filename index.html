@@ -150,12 +150,12 @@
         </div>
         <nav>
           <ul class="menu__list">
-            <li class="menu__link"><a href="#">ПРО МЕНЯ</a></li>
-            <li class="menu__link"><a href="#">МОЙ ОПЫТ</a></li>
-            <li class="menu__link"><a href="#">МОИ НАВЫКИ</a></li>
-            <li class="menu__link"><a href="#">МОИ РАБОТЫ</a></li>
-            <li class="menu__link"><a href="#">ПРАЙС-ЛИСТ</a></li>
-            <li class="menu__link"><a href="#">КОНТАКТЫ</a></li>
+            <li class="menu__link"><a href="#about">ПРО МЕНЯ</a></li>
+            <li class="menu__link"><a href="#resume">МОЙ ОПЫТ</a></li>
+            <li class="menu__link"><a href="#skills">МОИ НАВЫКИ</a></li>
+            <li class="menu__link"><a href="#portfolio">МОИ РАБОТЫ</a></li>
+            <li class="menu__link"><a href="#price">ПРАЙС-ЛИСТ</a></li>
+            <li class="menu__link"><a href="#contacts">КОНТАКТЫ</a></li>
           </ul>
         </nav>
         <div class="menu__social">
@@ -228,13 +228,13 @@
           Я web-разработчик из города Житомир
         </h1>
         <div class="promo__btns">
-          <a href="#" class="promo__link btn">Портфолио</a>
-          <a href="#" class="promo__link">Про меня</a>
+          <a href="#portfolio" class="promo__link btn">Портфолио</a>
+          <a href="#about" class="promo__link">Про меня</a>
         </div>
       </div>
     </section>
 
-    <section class="about">
+    <section id="about" class="about">
       <div class="container">
         <div class="about__wrapper">
           <div class="about__image">
@@ -389,7 +389,7 @@
       </div>
     </section>
 
-    <!-- <section class="resume">
+    <section id="resume" class="resume">
       <div class="container">
         <h2 class="title-fz16 resume__title">Опыт</h2>
         <div class="title-fz36 resume__subtitle">Чем я буду полезна</div>
@@ -427,7 +427,7 @@
                   <div class="resume__item-head">
                     <div class="resume__item-icon">
                       <img
-                        src="/src/icons/experience/university.svg"
+                        src="/src/icons/experience/courses.svg"
                         alt="university"
                       />
                     </div>
@@ -456,7 +456,7 @@
                   <div class="resume__item-head">
                     <div class="resume__item-icon">
                       <img
-                        src="/src/icons/experience/university.svg"
+                        src="/src/icons/experience/developer.svg"
                         alt="university"
                       />
                     </div>
@@ -478,7 +478,7 @@
                   <div class="resume__item-head">
                     <div class="resume__item-icon">
                       <img
-                        src="/src/icons/experience/university.svg"
+                        src="/src/icons/experience/designer.svg"
                         alt="university"
                       />
                     </div>
@@ -501,7 +501,7 @@
       </div>
     </section>
 
-    <section class="skills">
+    <section id="skills" class="skills">
       <div class="container">
         <h2 class="title-fz16 skills__title">Навыки</h2>
         <div class="title-fz36 skills__subtitle">Что я использую в работе</div>
@@ -586,7 +586,7 @@
       </div>
     </section>
 
-    <section class="progress">
+    <section id="progress" class="progress">
       <div class="container">
         <div class="progress__wrapper">
           <div class="progress__item">
@@ -664,7 +664,7 @@
       </div>
     </section>
 
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="container">
         <h2 class="title-fz16 portfolio__title">Портфолио</h2>
         <div class="title-fz36 portfolio__subtitle">Мои работы</div>
@@ -673,21 +673,22 @@
           <a href="#"><img src="/src/img/works/uber.jpg" alt="uber" /></a>
           <a href="#"><img src="/src/img/works/pulse.jpg" alt="pulse" /></a>
           <a href="#"><img src="/src/img/works/bread.jpg" alt="bread" /></a>
-          <a class="vertical" href="#"
-            ><img src="/src/img/works/plans.jpg" alt="plans"
-          /></a>
+          <div class="vertical">
+            <a href="#"><img src="/src/img/works/plans.jpg" alt="plans" /></a>
+          </div>
           <a href="#"><img src="/src/img/works/ipad.jpg" alt="ipad" /></a>
-          <a class="horizontal" href="#"
-            ><img src="/src/img/works/mac.jpg" alt="mac"
-          /></a>
+
+          <div class="horizontal">
+            <a href="#"><img src="/src/img/works/mac.jpg" alt="mac" /></a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="price">
+    <section id="price" class="price">
       <div class="container">
         <h2 class="title-fz16 price__title">Прайс-лист</h2>
-        <div class="divider"></div>
+        <div class="divider price__divider"></div>
         <div class="price__wrapper">
           <div class="price__item">
             <p class="price__item-title">Landing-page</p>
@@ -736,7 +737,7 @@
       </div>
     </section>
 
-    <section class="contacts">
+    <section id="contacts" class="contacts">
       <div class="container">
         <div class="contacts__wrapper">
           <div class="contacts__image">
@@ -751,26 +752,30 @@
             </div>
             <div class="contacts__social">
               <a href="#" class="contacts__link"
-                ><img src="/src/icons/social/Facebook 30x30.svg" alt="facebook"
+                ><img src="/src/icons/social/Facebook_30x30.svg" alt="facebook"
               /></a>
               <a href="#" class="contacts__link"
                 ><img src="/src/icons/social/telegram.svg" alt="telegram"
               /></a>
               <a href="#" class="contacts__link"
                 ><img
-                  src="/src/icons/social/Instagram 30x30.svg"
+                  src="/src/icons/social/Instagram_30x30.svg"
                   alt="instagram"
               /></a>
             </div>
             <div class="title-fz14 contacts__text">
               Или оставьте ваши данные и я сам вам напишу:
             </div>
-            <form action="#" class="contacts__form">
-              <div class="contacts__input">
+            <form
+              action="alexshura988@gmail.com"
+              class="contacts__form"
+              id="form"
+            >
+              <div class="contacts__input contacts__input-name">
                 <input required name="name" type="text" id="name" />
                 <label for="name">Ваше имя</label>
               </div>
-              <div class="contacts__input">
+              <div class="contacts__input contacts__input-email">
                 <input required name="email" type="text" id="email" />
                 <label for="email">Ваш email</label>
               </div>
@@ -781,7 +786,7 @@
               <div class="contacts__triggers">
                 <button class="contacts__btn btn">Отправить сообщение</button>
                 <div class="contacts__policy">
-                  <input required type="checkbox" />
+                  <input id="checkbox" type="checkbox" />
                   <span
                     >Я согласен(а) с
                     <a href="/policy.html"
@@ -794,8 +799,7 @@
           </div>
         </div>
       </div>
-    </section> -->
-    -->
+    </section>
 
     <script type="module" src="/src/js/script.js"></script>
   </body>
